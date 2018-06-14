@@ -2,8 +2,7 @@ const btn = document.querySelector('#submit-btn');
 const content = document.querySelector('.content');
 
 const displayResult = document.createElement('p');
-displayResult.setAttribute('id', 'result-UI')
-displayResult.classList.add('result', 'text-primary', 'text-center');
+displayResult.classList.add('result', 'text-primary', 'text-center', 'mt-md-5');
 content.appendChild(displayResult);
 
 const PLNEUR = 4.24;
@@ -35,18 +34,17 @@ btn.addEventListener('click', function (e) {
         result = inputAmount * USDEUR;
     } else {
         result = inputAmount * 1;
-        
-    } 
 
-    result = result.toFixed(2);
-    
-    displayResult.textContent = `Kwota ${inputAmount} ${currencyFrom} pozwoli Ci na zakup ${result} ${currencyTo}`;
-    
+    }
+
+    if (inputAmount === '') {
+
+        displayResult.textContent = `Wpisz kwotę jaką dysponujesz abu otrzymać wynik`;
+
+    } else {
+        result = result.toFixed(2);
+
+        displayResult.textContent = `Kwota ${inputAmount} ${currencyFrom} pozwoli Ci na zakup ${result} ${currencyTo}`;
+    }
+
 });
-
-
-    
-    
-
-
-// console.log(result);
