@@ -1,13 +1,13 @@
 .result {
-    margin-top: 20px;
+    margin-top: 40px;
     font-size: 24px;
 }
 
 .content {
     padding: 15px;
+    -webkit-box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     border-radius: 5px;
     margin: 20px 0;
+	min-height: calc(100vh - 80px);
 }
-
-
